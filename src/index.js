@@ -1,5 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import Car from './car';
+import Truck from './truck';
+import Garage from './garage';
 
 const myfristelement = <h1>Hello Bumble</h1>
 
@@ -31,9 +34,20 @@ const grocerylist = (
 
 const firsttextinput = <input type="text" />;
 
+// const mycar = new Car();
+const mynewcarinfo = {make: 'Ford', model: 'Camero'};
+const mynewcar = <Car  brand={mynewcarinfo} color='green' />;
+
 ReactDOM.render(myfristelement, document.getElementById('root'));
 ReactDOM.render(myelement, document.getElementById('table'));
 ReactDOM.render(myheader, document.getElementById('firstheader'));
 ReactDOM.render(mathelement, document.getElementById('mathelement'));
 ReactDOM.render(grocerylist, document.getElementById('grocerylist'));
 ReactDOM.render(firsttextinput, document.getElementById('firsttextinput'));
+// ReactDOM.render(<Car color='blue'/>, document.getElementById('vehicleelement1'));
+// also works..
+ReactDOM.render(mynewcar, document.getElementById('vehicleelement1')); 
+ReactDOM.render(Truck(), document.getElementById('vehicleelement2')); 
+// also works..
+// ReactDOM.render(<Truck />, document.getElementById('vehicleelement2')); 
+ReactDOM.render(<Garage />, document.getElementById('garageelement')); 
