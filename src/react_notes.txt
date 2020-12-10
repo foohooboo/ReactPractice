@@ -1,0 +1,28 @@
+lifecycles:
+    mounting:
+        constructor
+        getDerivedStateFromProps
+        render (required)
+        componentDidMount
+    updating: (ie: after a setState() call)
+        getDerivedStateFromProps
+        shouldComponentUpdate (perhaps a filter shouldn't update at EVERY keystroke, maybe just <enter> or change focus?)
+        render
+        getSnapshotBeforeUpdate (always pair with the next funct)
+        componentDidUpdate (always pair with the previous funct)
+    unmounting:
+        componentWillUnmount (alert("message"))
+
+Events (camelCase)
+    click = onClick={shoot} vice (html) onClick="shoot()"
+    change = onChange={this.myChangeHandler}
+    mouseover
+    build function in component
+    using arrow methods (shoot = () => {}) ties the function to the component in which it resides
+        otherwise, if normal method definitions are used, 'this' will refer to whatever object called 
+        the function (ie: global window, button, etc..)
+        If using regular function definitions, bind 'this' to the function in the constructor   
+            ie: constructor(props){
+                    super(props)
+                    this.shoot = this.shoot.bind(this)
+                }

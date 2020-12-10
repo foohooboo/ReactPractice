@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import Car from './car';
 import Truck from './truck';
 import Garage from './garage';
+import NewUserForm from './new_user_profile_form';
 
 const myfristelement = <h1>Hello Bumble</h1>
 
@@ -38,6 +39,9 @@ const firsttextinput = <input type="text" />;
 const mynewcarinfo = {make: 'Ford', model: 'Camero'};
 const mynewcar = <Car  brand={mynewcarinfo} color='green' />;
 
+const userform = <NewUserForm />;
+
+ReactDOM.render(<NewUserForm />, document.getElementById('userinfo'));
 ReactDOM.render(myfristelement, document.getElementById('root'));
 ReactDOM.render(myelement, document.getElementById('table'));
 ReactDOM.render(myheader, document.getElementById('firstheader'));
