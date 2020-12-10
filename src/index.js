@@ -41,7 +41,7 @@ const mynewcar = <Car  brand={mynewcarinfo} color='green' />;
 
 const userform = <NewUserForm />;
 
-ReactDOM.render(<NewUserForm />, document.getElementById('userinfo'));
+ReactDOM.render(userform, document.getElementById('userinfo'));
 ReactDOM.render(myfristelement, document.getElementById('root'));
 ReactDOM.render(myelement, document.getElementById('table'));
 ReactDOM.render(myheader, document.getElementById('firstheader'));
