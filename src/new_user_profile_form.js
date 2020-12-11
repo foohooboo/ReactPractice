@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from './mystyle.module.css';
 
 class NewUserForm extends React.Component {
     constructor(props){
@@ -45,6 +46,7 @@ class NewUserForm extends React.Component {
                 {header}
                 <p>Enter your first name:</p>
                 <input
+                    className={styles.bigblue}
                     type='text'
                     name='firstname'
                     onChange={this.myChangeHandler}

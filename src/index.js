@@ -4,11 +4,12 @@ import Car from './car';
 import Truck from './truck';
 import Garage from './garage';
 import NewUserForm from './new_user_profile_form';
+import './App.css';
 
-const myfristelement = <h1>Hello Bumble</h1>
+const myfristelement = <h1 style={{color:'greenyellow'}}>Hello Bumble</h1>
 
 const myelement = (
-  <table>
+  <table style={{backgroundColor:'grey'}}>
     <tr>
       <th>Name</th>
     </tr>
@@ -33,11 +34,11 @@ const grocerylist = (
   </ul>
 );
 
-const firsttextinput = <input type="text" />;
+const firsttextinput = <input style={{color:'blue', backgroundColor:'blueviolet'}} type="text" />;
 
 // const mycar = new Car();
 const mynewcarinfo = {make: 'Ford', model: 'Camero'};
-const mynewcar = <Car  brand={mynewcarinfo} color='green' />;
+const mynewcar = <Car brand={mynewcarinfo} color='green' />;
 
 const userform = <NewUserForm />;
 
